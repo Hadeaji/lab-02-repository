@@ -1,0 +1,19 @@
+
+
+#photo-template {
+    display: none;
+}
+
+
+
+div img{
+    width: 500px;
+    height: 350px;
+    
+}
+select{
+    padding: 10px 20px;
+    font-size: 60%;
+    background-color: #a8a8aa;
+    color: #3b37bd;
+}
