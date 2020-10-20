@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pic-gallery</title>
-    
-    <!-- <link rel="stylesheet" href="css/reset.css"> -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layouts.css">
-    <link rel="stylesheet" href="css/modules.css">
 
-    <script src="js/jquery-3.5.1.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pic-gallery</title>
+
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layouts.css">
+  <link rel="stylesheet" href="css/modules.css">
+
 
 </head>
+
 <body>
-    <header>
-        <h1>The Gallery of Horns</h1>
-        <select id="select">
-          <option value="all" id="option">All pictures</option>
-        </select>
-    </header>
-      <main>
-        <div id="photo-template">
-          <h2></h2>
-          <img src="" alt="">
-          <p></p>
+  <header>
+    <h1>The Gallery of Horns</h1>
+    
+  
+    <nav>
+      <button id="Page1" onclick="page1()">Page 1</button>
+      <button id="Page2" onclick="page2()">Page 2</button>
+
+      
+    </nav>
+    <select id="select"></select>
+    <button id="Page1" onclick="sort1()">Sort by Title</button>
+    <button id="Page2" onclick="sort2()">Sort by Horns</button>
+
+  </header>
+  <main>
+    <section id="allItems">
+      <template id="mustache-template" type="text/x-tmpl-mustache">
+        <div class="{{keyword}} all">
+          <h2>{{title}}</h2>
+          <img src={{image_url}}>
+          <p>{{description}}</p>
         </div>
-      </main>
-      <footer>
-        © 2018 Code Fellows
-      </footer>
-      <script src="js/app.js"></script>
+      </template>
+    </section>
+  </main>
+  <footer>
+    © 2018 Code Fellows
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.0.1/mustache.min.js"
+    integrity="sha512-6AXIWogbKpsHvoZJrJtHpIYES4wP8czSj0zk7ZfwOYS8GWYFNSykwdfapt7yQc4ikZytemBu+QyVObzBHJMwYg=="
+    crossorigin="anonymous"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
+
 </html>
